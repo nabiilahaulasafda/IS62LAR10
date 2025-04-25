@@ -7,8 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <center>
-    situs tidak dapat dijangkau
-    </center>
+    halo, ini tampilan view baru untuk coba-coba
 </body>
 </html>
