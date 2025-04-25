@@ -13,31 +13,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
 });
 
-// Route::get('/in', function () {
-//     return view('index');
+// Route::get('/cth', function () {
+//     return view('contoh');
 // });
 
 // Route::fallback(function () {
-//     return view('not');
+//     return view('notfound');
 // });
 
-// Route::get('mhs/{no}', function ($no) {
-//     echo "ini halaman informasi mahasiswa dengan no $no";
-// });
+// // Route::get('mahasiswa/{nama}', function ($nama) {
+// //     echo "Ini Halaman Mahasiswa dengan Nama $nama";
+// // });
 
-// Route::get('/hai/haii/haii', function () {
-//     echo "hello every body";
+// Route::get('/hello/hello2/hellolagi', function () {
+//     echo "Hello World";
 // });
 
 // Route::get('/mahasiswa', function () {
-// $kelas = "IS62";
-// $data = ["bil","bila","bibil","nabila","nabiilah"];
+//     $kelas = "IS63";
+//     $data = ["Khalifah","Herdio","Badri","Raihan","Putri","Hanif"];
 
-//     // return view('mahasiswa.index')->with ('mhs', $data);
+//     // return view('mahasiswa.index')->with('mhs',$data)->with('kls',$kelas);
 //     return view('mahasiswa.index',compact('kelas','data'));
 // });
 
@@ -50,17 +50,21 @@ Route::get('/', function () {
 //     return view('mahasiswa',compact('nama','nilai','nilai2'));
 // });
 
-Route::get('/mahasiswa', function () {
+Route::get('/', function () {
     $data_mhs = ["Abdul","Adha","Aidil","Alif","Asfal"];
     return view('layout.master',compact('data_mhs'));
 });
 
+Route::get('/mahasiswa', function () {
+    $data_mhs = ["Abdul","Adha","Aidil","Alif","Asfal"];
+    return view('data.mahasiswa',compact('data_mhs'));
+});
+
 Route::get('/dosen', function () {
     $data_dos = ["Ismanuddin","Mustofa Lutfi","Rita Warni","Ridha Ansari","Dzulgunar M Nasir"];
-    return view('data.mahasiswa',compact('data_dos'));
+    return view('data.dosen',compact('data_dos'));
 });
 
 Route::get('/galeri', function () {
-    return view('layout.galeri');
+    return view('data.galeri');
 });
-
