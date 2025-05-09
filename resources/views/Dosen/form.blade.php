@@ -9,7 +9,7 @@
                     <h3 class="fw-bold text-center">{{ __('FORM DOSEN') }}</h3>
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST">
+                    <form action="{{ route('dosen.store') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label"> NIDN </label>
@@ -25,7 +25,7 @@
                             <label for="exampleInputPassword1" class="form-label"> Email </label>
                             <input type="text" name="email" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <button href="dosen" type="submit" class="btn btn-primary">Submit</button>
+                        <button href="" type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>

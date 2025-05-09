@@ -87,5 +87,7 @@
     <script src="../js/bootstrap.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
 </body>
 </html>

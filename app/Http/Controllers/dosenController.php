@@ -13,6 +13,8 @@ class dosenController extends Controller
     {
         // menampilkan tampilan index
         return view('Dosen.index');
+        $dosens = Dosen::all();
+        return view('dosen.index', compact('dosens'));
     }
 
     /**
@@ -41,7 +43,7 @@ class dosenController extends Controller
             // // Dosen::create($validated);
 
             // // Redirect ke halaman index dengan pesan sukses
-            return redirect()->route('dosen.index')->with('success', 'Data dosen berhasil disimpan.');
+            return redirect()->route('dosen.index')->with('success', 'Data dosen berhasil disimpan ');
     }
 
     /**

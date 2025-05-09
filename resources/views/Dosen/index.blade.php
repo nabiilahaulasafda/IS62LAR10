@@ -1,6 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if (session('success'))
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    {{ session('success') }}<i class="fa-solid fa-check"></i>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+
 <div class="container">
     <div class="row mt-5">
         <div class="col-8 m-auto">
@@ -59,6 +75,13 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        successModal.show();
+    });
+</script>
+
 
 
 @endsection

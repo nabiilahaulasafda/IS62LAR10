@@ -74,6 +74,11 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //data dosen
-Route::get('/dosen', [dosenController::class, 'index']);
+Route::get('/dosen', [dosenController::class, 'index'])->name('dosen.index');
 Route::post('/dosen/add', [DosenController::class, 'store'])->name('dosen.store');
 Route::get('/dosen/add', [dosenController::class, 'create']);
+
+// Route::prefix('admin')->name('admin.')->group(function () {
+//     Route::get('/dosen', [DosenController::class, 'index'])->name('dosen.index');
+// });
+
