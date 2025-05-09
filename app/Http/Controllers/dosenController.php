@@ -21,6 +21,7 @@ class dosenController extends Controller
     public function create()
     {
         // form tambah
+        return view('Dosen.form');
     }
 
     /**
@@ -29,6 +30,18 @@ class dosenController extends Controller
     public function store(Request $request)
     {
         // proses tambah
+            // Validasi data
+            $validated = $request->validate([
+                'nidn' => 'required|unique:dosens',
+                'nama' => 'required',
+                'email' => 'required|email',
+            ]);
+
+            // // Simpan data ke database
+            // // Dosen::create($validated);
+
+            // // Redirect ke halaman index dengan pesan sukses
+            return redirect()->route('dosen.index')->with('success', 'Data dosen berhasil disimpan.');
     }
 
     /**
