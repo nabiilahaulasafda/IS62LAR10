@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Dosen;
 
 class dosenController extends Controller
 {
@@ -32,12 +33,13 @@ class dosenController extends Controller
     public function store(Request $request)
     {
         // proses tambah
-            // Validasi data
-            $validated = $request->validate([
-                'nidn' => 'required|unique:dosens',
-                'nama' => 'required',
-                'email' => 'required|email',
-            ]);
+            $dosen = new Dosen;
+            $dosen->nidn = $request->nidn;
+            $dosen->nama = $request->nama;
+            $dosen->email = $request->email;
+            $dosen->rumpun = $request->rumpun;
+            $dosen->nohp = $request->nohp;
+            $dosen->save();
 
             // // Simpan data ke database
             // // Dosen::create($validated);
