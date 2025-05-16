@@ -35,6 +35,7 @@
                             <th scope="col">NIDN</th>
                             <th scope="col">NAMA</th>
                             <th scope="col">EMAIL</th>
+                            <th scope="col">ACTION</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -43,30 +44,15 @@
                             <td>1937146</td>
                             <td>Maulian Saputra</td>
                             <td>mauliansaputra@gmail.com</td>
+                            <td><a href="" class="btn btn-warning btn-sm"><i class="fa-solid fa-eye"></i></a>
+                            <a href="" class="btn btn-primary btn-sm"><i class="fa-solid fa-pencil"></i></a>
+                            <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a></td>
                           </tr>
                           <tr>
                             <th scope="row">2</th>
                             <td>9714082</td>
                             <td>Hadi Saputra</td>
                             <td>hadisaputra@gmail.com</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>018624139</td>
-                            <td>Ismanuddin</td>
-                            <td>ismanuddin@gmail.com</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td>08235624139</td>
-                            <td>Susilawati Yahya</td>
-                            <td>susliwatiyahya@gmail.com</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">5</th>
-                            <td>096624139</td>
-                            <td>Rita Warni</td>
-                            <td>ritawarni@gmail.com</td>
                           </tr>
                         </tbody>
                       </table>

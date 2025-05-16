@@ -13,9 +13,9 @@ use App\Http\Controllers\dosenController;
 |
 */
 
-// Route::get('/home', function () {
-//     return view('welcome');
-// });
+Route::get('/home', function () {
+    return view('home');
+});
 
 // Route::get('/cth', function () {
 //     return view('contoh');
