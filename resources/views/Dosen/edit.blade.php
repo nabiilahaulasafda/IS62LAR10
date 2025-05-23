@@ -9,8 +9,9 @@
                     <h3 class="fw-bold text-center">{{ __('FORM EDIT') }}</h3>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('dosen.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="/dosen/{{ $dosen->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
+                        @method('PUT')
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label"> NIDN </label>
                             <input type="text" value="{{ $dosen->nidn }}" name="nidn" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -44,7 +45,7 @@
                             <label for="exampleInputPassword1" class="form-label"> No Handphone </label>
                             <input type="text" value="{{ $dosen->nohp }}" name="nohp" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
+                        <button type="submit" class="btn btn-primary">Edit</button>
                     </form>
                 </div>
             </div>
