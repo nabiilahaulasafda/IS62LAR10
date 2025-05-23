@@ -79,6 +79,7 @@ Route::post('//add', [DosenController::class, 'store'])->name('dosen.store');
 Route::get('/dosen/add', [dosenController::class, 'create']);
 Route::get('/dosen/edit/{id}', [dosenController::class, 'edit']);
 Route::put('/dosen/{id}', [dosenController::class, 'update']);
+Route::delete('/dosen/{id}', [dosenController::class, 'destroy']);
 
 
 // Route::prefix('admin')->name('admin.')->group(function () {

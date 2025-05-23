@@ -45,7 +45,7 @@ class dosenController extends Controller
             // // Dosen::create($validated);
 
             // // Redirect ke halaman index dengan pesan sukses
-            return redirect()->route('dosen.index')->with('success', 'Data dosen berhasil disimpan ');
+            return redirect()->route('dosen.index')->with('success', 'Data Dosen Berhasil Disimpan ');
     }
 
     /**
@@ -89,5 +89,9 @@ class dosenController extends Controller
     public function destroy(string $id)
     {
         // proses hapus
+        $dosen = Dosen::find($id);
+        $dosen->delete();
+
+        return redirect('/dosen');
     }
 }
