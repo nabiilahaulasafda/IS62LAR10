@@ -39,21 +39,22 @@
                           </tr>
                         </thead>
                         <tbody>
+                            @forelse ( $dosen as $data)
                           <tr>
-                            <th scope="row">1</th>
-                            <td>1937146</td>
-                            <td>Maulian Saputra</td>
-                            <td>mauliansaputra@gmail.com</td>
-                            <td><a href="" class="btn btn-warning btn-sm"><i class="fa-solid fa-eye"></i></a>
-                            <a href="" class="btn btn-primary btn-sm"><i class="fa-solid fa-pencil"></i></a>
-                            <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a></td>
+                            <th scope="row">{{$nomor++}}</th>
+                            <td>{{ $data->nidn }}</td>
+                            <td>{{ $data->nama }}</td>
+                            <td>{{ $data->email }}</td>
+                            <td>
+                                <a href="" class="btn btn-warning btn-sm"><i class="fa-solid fa-eye"></i></a>
+                                <a href="/dosen/edit/{{ $data->id }}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a></td>
                           </tr>
+                          @empty
                           <tr>
-                            <th scope="row">2</th>
-                            <td>9714082</td>
-                            <td>Hadi Saputra</td>
-                            <td>hadisaputra@gmail.com</td>
+                            <th colspan="5" scope="row">Data Tidak Ada</th>
                           </tr>
+                          @endforelse
                         </tbody>
                       </table>
                 </div>

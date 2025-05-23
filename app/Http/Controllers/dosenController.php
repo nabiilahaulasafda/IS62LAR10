@@ -13,9 +13,9 @@ class dosenController extends Controller
     public function index()
     {
         // menampilkan tampilan index
-        return view('Dosen.index');
-        $dosens = Dosen::all();
-        return view('dosen.index', compact('dosens'));
+        $nomor = 1;
+        $dosen = Dosen::all();
+        return view('Dosen.index',compact('dosen','nomor'));
     }
 
     /**
@@ -62,6 +62,8 @@ class dosenController extends Controller
     public function edit(string $id)
     {
         // from edit
+        $dosen = Dosen::fin($id);
+        return view('Dosen.edit',compact('dosen'));
     }
 
     /**
